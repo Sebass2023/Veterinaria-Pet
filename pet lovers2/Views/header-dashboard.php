@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PetLovers</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="UsuariosController.php?accion=home">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fa fa-paw"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Pet Lovers</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="UsuariosController.php?accion=home">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inicio</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <?php if($_SESSION['Rol_idRol'] == "2"){ ?>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Control Adminstrador</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="CitasController.php?accion=citas">Servicios</a>
+                        <a class="collapse-item" href="UsuariosController.php?accion=usuarios">Usuarios</a>
+                        <a class="collapse-item" href="ProductosController.php?accion=Productos">Productos</a>
+                    </div>
+                </div>
+            </li>
+        <?php } ?>
+
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="ProductosController.php?accion=catalogo">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Catálogo</span></a>
+            </li>
+
+            <!-- redes -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseThree">
+                    <i class="fas fa-fw fa-phone"></i>
+                    <span>Contacto</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header"></h6>
+                        <a class="collapse-item" href="https://api.whatsapp.com/send?phone=573132619670&text=%C2%A1Hola!%20Estoy%20interesad%40%20en%20tus%20servicios%F0%9F%90%BE%E2%9D%A4%EF%B8%8F"><i class="fa fa-whatsapp"></i> Whatsapp</a>
+                        <a class="collapse-item" href="https://www.instagram.com/petloversvnl/?igshid=YmMyMTA2M2Y%3D"><i class="fa fa-instagram"></i> Instagram</a>
+                        <a class="collapse-item" href="https://www.facebook.com/petlovers.mel"><i class="fa fa-facebook"></i> Facebook</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <center><a href="ProductosController.php?accion=catalogo" class="btn btn-info">Obseva nuestro catálogo!</a></center>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <h3><i class="fa fa-shopping-cart"></i></h3>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">
+                                    <?php
+                                        if (isset($_SESSION['carrito_contador'])) {
+                                           echo $_SESSION['carrito_contador'];
+                                        }else{
+                                            echo "0";
+                                        } 
+                                    ?>        
+                                </span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Carrito de compras
+                                </h6>
+                                <?php 
+                                if (!isset($_SESSION['carrito_contador'])) {
+                                    echo"<center>No existen productos en el carrito</center>";
+                                }else{
+                                    $count = 1;
+                                    foreach ($_SESSION['carrito'] as $productos) { ?>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="mr-3">
+                                                <img width="50px" src="../assets/img/catalogo/<?php echo $_SESSION['carrito'][$count]['Imagen'] ?>">    
+                                            </div>
+                                            <div>
+                                                <?php 
+                                                    echo "<p>".$_SESSION['carrito'][$count]['Producto']."</p>";
+                                                    echo "<p><i>$ ".$_SESSION['carrito'][$count]['Valor']."</i></p>"; 
+                                                    $count = $count + 1;
+                                                ?>
+                                            </div>
+                                        </a>
+                                <?php 
+                                    }
+                                    echo "<a class='dropdown-item text-center medium text-gray-500' href='ProductosController.php?accion=pago'>Proceder al pago</a>";
+                                } ?>
+                            </div>
+                        </li>
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><?php echo $_SESSION['Nom_usuario']; ?></span>
+                                <img class="img-profile rounded-circle"
+                                    src="../img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Cerrar Sesión</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                
+                <!-- End of Topbar -->

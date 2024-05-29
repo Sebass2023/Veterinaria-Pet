@@ -1,0 +1,8 @@
+Este proyecto cuenta con roles, para ingresar directo al administrador hay una cuenta creada
+
+mikycdlm@gmail.com
+tvf123
+
+desde ahi pueden manejar todas las funcionalidades de la pagina
+
+el archivo SQL, es el llamado veterinaia2, se encuentra en esta misma carpeta.

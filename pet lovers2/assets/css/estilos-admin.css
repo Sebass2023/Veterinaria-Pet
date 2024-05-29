@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*Clases Especiales*/
+.borde{
+	border: 1px solid black;
+}
+
+/*Cuerpo*/
+body{
+	/*background-image: url('../img/inicial-admin.jpg');*/
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+/*Contenedor*/
+.contenedor{
+	width: 100%;
+	overflow: hidden;
+	font-family: 'Chelsea Market', cursive;
+	font-size: 15px;
+}
+
+/*Navegador*/
+nav{
+	width: 100%;
+	/*background: #272126;*/
+	background-color: #71cef9;
+}
+/*Nivel 0*/
+nav ul{
+	list-style: none;
+}
+nav>ul>li{
+	display:  inline-block;
+} 
+nav ul li{
+	width: 150px;
+	height: 100%;
+}
+nav ul li:hover>ul{
+	display: block;
+}
+nav ul li a{
+	display: block;
+	padding: 9.2%;
+	text-decoration: none;
+	color: white;
+	/*border: 1px solid #aaa;*/
+	/*background: #7A7070;*/
+	background-color: #71cef9;
+	text-align: center;
+}
+nav ul li a:hover{
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+	/*color: black;*/
+}
+.logo{
+    width: 100%;
+    max-height: 500%;
+    max-width: 500%;
+    height: 100%;
+    float: center;
+    text-align: center;
+}
+.logo img{
+    width: 200px;
+    height: 150px;
+    border-radius: 5%;
+    text-align: center;
+  
+}
+.cg1{
+	width: 20%;
+	height: 1000px;
+	float: left;
+	margin: auto;
+	background: rgba(83, 67, 67, 0.5);
+	text-align: center;	
+	color: white;
+}
+.c1{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+.c2{
+    width: 100%;
+    height: 15%;
+}
+.c3{
+    width: 100%;
+    height: 15%;
+}
+.c4{
+    width: 100%;
+    height: 15%;
+}
+.c7{
+    width: 100%;
+    height: 10%;
+    padding: 15px 0px 0px 0px; 
+    font-family: 'Dancing Script', cursive;
+	font-size: 30px;  
+}
+.c8{
+    width: 100%;
+    height: 15%;  
+    text-align: center; 
+    /*background: #272126;*/
+    background-color: #71cef9;
+}
+.cg2{
+	width: 80%;
+	height: 1000px;
+	float: left;
+	margin: auto;
+	text-align: left;	
+	color: white;
+}
+.c5{
+	width: 100%;
+	height: 5%;
+	text-align:right;
+}
+.c6{
+	width: 100%;
+	height: 92.5%;
+	background-size: 100% 100%;
+
+}
+.boton1, .boton2, .boton3{
+	font-family: 'Chelsea Market', cursive;
+	font-size: 10px;
+}
+
+.boton1{
+	width: 125px;
+	height: 25px; 
+	text-align: center;
+	margin: 5px 0px 5px 0px; 
+}
+.boton2{
+	width: 125px;
+	height: 25px; 
+	text-align: center;
+	margin: 5px 0px 5px 0px; 
+}
+.boton3{
+	width: 145px;
+	height: 25px; 
+	text-align: center;
+	margin: 5px 0px 5px 0px; 
+}
+/*área de trabajo principal*/
+main{
+	width: 80%;
+	height: 750%;
+	float:left;
+}
+main iframe{
+	width: 100%;
+	height: 50px;
+	border:0;
+}
+
+div iframe {
+	/*height: 100%; 
+	width: 100%;*/ 
+	width: 100%;
+	height:100%;
+	border: 0px solid;
+}
